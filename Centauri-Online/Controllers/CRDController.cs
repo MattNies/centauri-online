@@ -20,5 +20,11 @@ namespace Centauri_Online.Controllers
         {
             return View();
         }
+
+        // GET: Skill
+        public ActionResult Skill()
+        {
+            return View();
+        }
     }
 }

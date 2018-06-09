@@ -1,0 +1,727 @@
+﻿
+@{
+    ViewData["Title"] = "Skill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Skills</h2>
+
+<h3>Agility Skills:</h3>
+
+<div>
+    <h4>Unarmed/Dodge</h4>
+    <p>The Unarmed/Dodge skill is used when the character wishes to strike at an enemy without wielding a suitable melee weapon, they make an Unarmed skill check to attack.   Dodge can be used defensively against melee attacks and, for certain attacks (like from larger monsters or mechanical foes) making a Dodge check is the smartest option as parrying (see Melee) will incur major penalties. Complexity: Adds a threat range of 1 meter per complexity level; also allows for 1 attack of opportunity per complexity level.</p>
+    <p>Complexity: Adds a threat range of 1 meter per complexity level; also allows for 1 attack of opportunity per complexity level.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Brawling</dt>
+        <dd>+1 to unarmed/dodge checks when unarmed.</dd>
+        <dt>Skirmisher</dt>
+        <dd>+1 to offensive strikes with light melee weapons when using with the Unarmed/Dodge skill to attack.</dd>
+        <dt>Nimble</dt>
+        <dd>+1 to defensive Unarmed/Dodge checks, regardless of loadout.</dd>
+        <dt>CQC training</dt>
+        <dd>Grants reactionary attacks with Unarmed/Dodge skill regardless of loadout.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Stealth</h4>
+    <p>Stealth measures the ability to both move quietly under the shadows.  Stealth rolls are often rolled against opposed Notice checks for detection. A Stealth roll can be made while running at a -2, cannot be made while moving at a sprint.</p>
+    <p>Complexity: The Stealth complexity sets the complexity for the notice check.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Armored training</dt>
+        <dd>Removes 15 lbs of armor when calculating penalties to Stealth checks.</dd>
+        <dt>Assassin</dt>
+        <dd>+1 to Stealth checks while approaching an enemy for a silent takedown.</dd>
+        <dt>Running Shadow</dt>
+        <dd>Stealth checks can be made while sprinting at a -3.</dd>
+        <dt>Camouflage</dt>
+        <dd>Add Creativity to Stealth check while Standing still as a Concealment bonus.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Small Arms</h4>
+    <p> Small arms skill is used to fire hand held firearms in shootouts. Small arms can be used with Pistols, SMGs, Rifles, and Shotguns.  Smalls arms is also used with the manipulation of the firearms during combat reloading, manual reloading, and unjamming their weapon.</p>
+    <p>Complexity: Measures the ability to use more complex weapons.  Weapons with higher complexity than the user will incur penalties equal to the difference.</p>
+    <h5>Specializations:</h5>
+    <p>Small Arms users can choose to specialize in a weapon class covered in the description of the Small Arms skill. This gives them a +1 to all Small Arms rolls with that weapon.</p>
+</div>
+
+<div>
+    <h4>Sleight of Hand</h4>
+    <p>Sleight of Hand is the ability to manipulate hands with quick undetectable movements. Pickpocketing/stealing: A roll is made to pickpocket/ or steal without being detected.  A Sleight of Hand roll is made against notice checks, a successful MOS of 1 or more means the item has been taken without detection.  Small items can be swapped out (IE playing cards, a pen, sim cards) in front of opposing players by rolling off Sleight of Hand against notice as well. Difficulty penalties can be adjusted, here are some examples. Dim room: +1  Dark room: +2   Item in plain sight: -1    Item fastened to target: -2</p>
+    <p>Complexity: The Complexity of the Sleight of Hand set’s the complexity for the opposing Notice check.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Quick draw</dt>
+        <dd>A character may draw light weapons as a free action without incurring a reactionary attack.</dd>
+        <dt>Magician</dt>
+        <dd>May perform simple magic tricks to distract interested parties, -1 to distracted parties’ Notice checks while performing.</dd>
+        <dt>Swap Master</dt>
+        <dd>+1 to swapping items, can be done as a quick action.</dd>
+        <dt>Thief</dt>
+        <dd>+1 to pickpocket or steal checks.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Exo-Pilot</h4>
+    <p>The Exo-Pilot skill is representative of a character’s ability to move an Exo-Suit in the way they want during a combat or otherwise difficult situation. This is commonly reflected in dodging ranged and melee attacks, and attacking with melee weapons while piloting an Exo-Suit and is commonly affected by the Maneuver stat of the Exo-Suit being piloted.</p>
+    <p>Complexity: Measures the ability to use more complex Exo-Suits.  Exo-Suits with higher complexity than the user will incur penalties equal to the difference.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Infantry Hunter</dt>
+        <dd>While shooting at smaller targets than your Exo-Suit, you take a -1 penalty to the roll, rather than a -2.</dd>
+        <dt>Real Steel</dt>
+        <dd>+1 to close combat Exo-Suit attack rolls against other Exo-Suits.</dd>
+        <dt>Swift</dt>
+        <dd>Confer +5m of movement to piloted Exo-Suits.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Zero G Movement</h4>
+    <p>Movement checks in 0 gravity conditions must be made with appropriate skill and condition.  Zero G Movement handles the initial kick off of unassisted 0 G. When a man maneuver unit is attached, Zero G Movement is also used to calculate accuracy of the move.  Firing a firearm with any sort of recoil will also incur a Zero G movement check in order to prevent being immediately pushed back.</p>
+    <p>
+        Complexity: Complexity adds to the 0 G movement roll.
+        <br />Example Checks are as follows:
+        <br />Double 0 G speed: (DC 4),  Firing a firearm (DC 4+ROF) Dangerous obstacles: (DC set by GM)
+    </p>
+    <p>Specializations: Zero G Movement Specialization is simple enough to add a +1 each time a Zero G Movement specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Personal Flight Devices</h4>
+    <p>The skill for parachuting covers a broad range of free falling inside a planet's atmosphere. Parachuting rolls are made when the thermosphere is reached and gravity starts its pull.  The distance from the surface determines the amount of rolls made.</p>
+    <table>
+        <tr>
+            <td>Troposphere</td>
+            <td>0 - 10 miles: 2 Rolls: DC 5</td>
+            <td>(MOF = 1 KM)</td>
+            <td>(Parachute Pull: DC 4)</td>
+        </tr>
+        <tr>
+            <td>Stratosphere</td>
+            <td>10 -31 miles: 2 Rolls: DC 6</td>
+            <td>(MOF = 5 KM)</td>
+            <td>(Parachute Pull: DC 5)</td>
+        </tr>
+        <tr>
+            <td>Mesosphere</td>
+            <td>31 - 53 miles: 2 Rolls DC 7</td>
+            <td>(MOF = 10 KM)</td>
+            <td>(Parachute Pull: DC 6)</td>
+        </tr>
+        <tr>
+            <td>Thermosphere</td>
+            <td>53 miles +: 2 Rolls DC 8</td>
+            <td>(MOF = 20 KM)</td>
+            <td>(Parachute Pull: DC 7)</td>
+        </tr>
+    </table>
+    <p>Complexity: Complexity adds to the Parachuting roll.</p>
+    <p>Specializations: Parachuting Specialization is simple enough to add a +1 to Parachuting rolls each time a Parachuting specialization is taken.</p>
+</div>
+
+
+<h3>Perception Skills:</h3>
+<div>
+    <h4>Aircraft Pilot</h4>
+    <p>A pilot must use this skill while in atmospheric flight to navigate around obstacles, land in difficult situations, and dodge enemy fire.  Aircraft Pilot is also used in atmosphere to hold a tail on an enemy fighter or to break away from a fighter who is tailing. See Dogfighting for more advanced tools for Aircraft Pilots:</p>
+    <p>Complexity: Complexity is used against the aircraft being flown.  It can also be added to non opposed flight checks. (Such as landing or obstacles)</p>
+    <p>
+        Specializations: A specialization can be chosen off of a favored aircraft type
+        (Fighter, Scout, Heavy Fighter, Transport, Heavy Transport, Corvette etc…); specializing in this type of aircraft gives a +1 to all Aircraft Pilot rolls when using that type of aircraft.
+    </p>
+</div>
+
+<div>
+    <h4>Investigation</h4>
+    <p>Investigation is used during searches for obscure details.  Investigation may be applied when searching a room for a blood sample, reviewing security footage for hidden details, or even looking through a large catalogue for a piece of information.</p>
+    <p>Complexity: Complexity is set by the target being investigated, a default of 1 is set as the basic Investigation difficulty.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Thorough Investigator</dt>
+        <dd>Automatically succeeds on Investigation checks as long as the investigator spends time investigating equal to (complexity of the check*1 hour).</dd>
+        <dt>Deductive</dt>
+        <dd>The player can use their Investigation complexity in place of their Human Perception complexity when making Human Perception checks.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Combat Sense</h4>
+    <p>Combat sense determines the reactions of individuals during the high stress environment of combat.  Combat Sense is rolled in the beginning of every combat, The individuals then act in their perspective combat sense order from highest to lowest. Ties in combat sense order are broken by Complexity first, then perception.</p>
+    <p>Complexity: Complexity is used to adjust to certain equipment that may be worn that may hamper response time.  Night Vision (CPX 2)   Thermal (CPX 3)  Sonar (CPX 4).</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Reactive Retina</dt>
+        <dd>Changing optics is a free action instead of a quick action.</dd>
+        <dt>Point Man</dt>
+        <dd>+1 to CS on first round of combat.</dd>
+        <dt>Battle Buddy</dt>
+        <dd>Quick action, pick an ally within 10 meters, they gain +1 CS.</dd>
+        <dt>Hyper Combative</dt>
+        <dd>Grants the ability to remove skill dice for individual +1 roll bonuses.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Sniper <span>(Requirement 1/Small Arms)</span></h4>
+    <p>Sniper is a skill that focuses on the ability to use rifles with precision at long ranges. In order for a character to use their sniper skill, they must not have moved this round.  Sniper must be used on a Rifle or designated “Sniper” weapon system, and can not fire this skill while utilizing more than a rate of fire of 0. The sniper skill can never be used to suppress enemies, or skills that use suppression like effects. Characters who aim with the sniper skill gain two aim dice for every round they aim, they may expand the number of aim dice they can use to twice their characters Sniper skill level.  These aim dice are forfeit if the Sniper uses any other skill (Including Defensive checks). Aim dice are spent when the weapon has fired.</p>
+    <p>Complexity: Complexity is based off of the rifle used for the Sniper skill.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Extended Shot</dt>
+        <dd>The Sniper can shoot 1 bracket beyond maximum (X2 Max range) at an additional -2 (-6).</dd>
+        <dt>Cover Reduction</dt>
+        <dd>All shots ignore 1 cover bonus (This includes shooting through walls with a +3 cover)</dd>
+        <dt>Fast Follow up</dt>
+        <dd>Starts a new aim dice pool of 1 after a weapon is fired using the Sniper skill.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Notice</h4>
+    <p>The action of spotting out objects or actions quickly in an area.  Notice can involve any of the senses to locate a target object in an area.</p>
+    <table>
+        <caption>Notice Bonuses</caption>
+        <tr>
+            <td>Human</td>
+            <td>Within 10 Meters (Close +1)</td>
+            <td>11-100 Meters (Short 0)</td>
+            <td>101-200 (Medium -1)</td>
+            <td>201-400 (Long -2)</td>
+            <td>Over 401 (Extreme -4)</td>
+        </tr>
+    </table>
+    <p>Alert: Any individual may declare an alert status, allowing them to move at half their speed, constantly searching an area.  With Alert the character gains a +1 Notice check on all of his senses. The Alert individual also declares his 90 degree field of view, Any units who are stealthed within short distance without cover or concealment are automatically detected in the Alert individual's field of view. Sentries on a slow patrol, Camera’s and Guard drones will automatically be considered on Alert.</p>
+    <p>Complexity: Complexity is always set by the object in hiding. If the notice is for inanimate object, the GM can set the complexity of the required Notice check as they see fit.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Sixth Sense</dt>
+        <dd>Gain +1 to Spot anything that is within 10 meters of the user.  This includes enemy characters attempting to stealth attack.</dd>
+        <dt>Spotter</dt>
+        <dd>When attempting to Spot a target at Medium range or Longer, +1 to visual Notice check.</dd>
+        <dt>Trap Sense</dt>
+        <dd>+1 to notice any mechanical Traps. (IE. Grenade traps, False floors, Trip wire)</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Gunnery</h4>
+    <p>The skill “Gunnery” applies to the act of operating a mounted weapon.  These weapons can be attached to a vehicle and fired from the pilot seat or  gunner's chair, attached to a swivel mount and crewed directly, connected onto a remote drone and fired via remote, or just an emplaced heavy weapon with a tripod attached on the ground.</p>
+    <p>Complexity: Complexity is set by the weapon or the vehicle holding the weapon, whichever is the greatest.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Vehicle Specializations</dt>
+        <dd>+1 to selected Vehicle type.  (Exo’s, Surface Vehicles, Fliers, Submersibles)</dd>
+        <dt>Experienced Gamer</dt>
+        <dd>+1 to Gunnery on remote access Drones.</dd>
+        <dt>Rooster</dt>
+        <dd>+1 to Gunnery when operating a weapon fired from a vehicle swivel or ground mount.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Defense</h4>
+    <p>This skill is used to protect characters while dismounted against any ranged attacks.  Defense also protects against explosives and area of effect attacks like fire and electricity.</p>
+    <p>Complexity: Complexity training in defense allows the character to wear more advanced armors. Failure to meet this complexity gives penalties to all defense checks (Melee and Unarmed.)</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Quick wits</dt>
+        <dd>When wearing no armor, or armor that weighs less than 15 lbs, add an extra defense dice to all defense rolls.</dd>
+        <dt>EOD Training</dt>
+        <dd>+1 to Defense Rolls against area of effect weapons.</dd>
+        <dt>CQC footing</dt>
+        <dd>+1 to Defense Rolls while engaged in close combat.</dd>
+    </dl>
+</div>
+
+<h3>Fitness Skills:</h3>
+
+<div>
+    <h4>Throwing</h4>
+    <p>This skill handles all objects that are being physically tossed by a character.  This includes grenades and weapons thrown directly at an enemy. To judge the difficulty of a throw, a character must figure out his comfortable throw weight. To figure this out, you take character strength, and add 1 to it, to find the total weight in lbs a character can throw.</p>
+    <p>
+        Throwing Range Brackets (Per Throw weight)<br />
+        A characters throw weight determines what they can throw comfortably, every lb over the throw weight reduces the short range bracket by a meter.<br />
+        Short throw range = 3 + (3 Meters per complexity)<br />
+        Ex. A Character who is Strength 2, and 2 Skill 2 Complexity in throwing can throw a 3 lb object 9 Meters with no penalty, 18 meters with a -1, 36 meters with a -2, and up to 72 meters with a -4.<br />
+        Throwing Items at enemies: Throwing a weapon directly at an enemy takes an opposed roll against their defense, with range and weight penalties applied as usual.<br />
+        Throwing items at an area: is a base test throwing skill test against 3.  A Strength 1 character can reliably throw a 2 lb object 3 meters without any throwing training pretty easily.  If the area is obscured, behind cover, or moving, apply the appropriate penalties to the throw check. If the thrown item misses its target area, it then deviates. The thrown object will deviate an amount of tiles (5 Meters per tile) towards a random direction.  Roll randomly when determining a direction (Scatter dice or a clock system RNG roll), fumbles on a throw always scatter back to the thrower.<br />
+        Grenades: Grenades that are thrown are treated as any normal item being thrown at an area target. After a grenade lands, another throw roll is made to determine its blast effect.  A good roll on blast effect could represent a grenade that has been well timed and positioned well enough to be most effecting, a bad blast roll could represent a grenade that gives the enemy too much time to react, or even a dud.  Fumbles on blast effect rolls always equal a dud. The grenade usually has 2 different radius distances for blast effects, the primary blast effect, and the secondary.  Targets in the primary blast effect range get a -1 to defense rolls, while targets in the secondary blast effect range do not suffer any extra penalties.<br />
+    </p>
+    <p>Complexity: Complexity adds to the throw range of the item, for some items it could also be used against its item complexity.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Slinger</dt>
+        <dd>A character excels at accurately throwing weapons directly at enemy opponents +1 when throwing a weapon with the throw special trait.</dd>
+        <dt>Ordinance</dt>
+        <dd>A character excels at throwing explosive weapons and grenades at area targets, +1 to throw when doing so.</dd>
+        <dt>Dual Toss</dt>
+        <dd>A character can use dual wielding to throw two 1 handed actions in a round (using dual wielding penalty for off hand). The character must split their throwing dice when doing so.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>G-Handling</h4>
+    <p>
+        The most difficult part of a pilot's training, is preparing their body for the tremendous G-force that comes with rapid acceleration and shifting force of their vehicles. A pilot must take a G Handling check to avoid becoming sick, or even losing consciousness during hard maneuvers. The DC for a G-Handling check is first calculated by the speed of the aerial vehicle. Atmospheric fliers only calculate the DC for the difference in Speed between each round, however Space vehicles must apply a G-handling check at the static speed DC every round of combat(To include Chases).<br />
+        Vehicle Speed /2 equals G handling DC.<br />
+        G-Handling checks are also made when performing evasive maneuvers<br />
+        Vehicle Speed DC + Evasive Maneuver bonus = DC<br />
+        When turns are made, G handling checks must be made depending on the turn<br />
+        Vehicle Speed DC (Quarter turn)  Vehicle Speed DC +2 (180 Degree turn)<br />
+        G-Handling Failure Penalties:<br />
+        MOF 1: Feel nauseous, -1 to all rolls until medicated or applied rest.<br />
+        MOF 2: Feel nauseous, -1 to all rolls, plus vomiting<br />
+        MOF 3+: Go unconscious for the MOF rating in minutes.<br />
+    </p>
+    <p>Complexity: Due to the high DC’s, Complexity will always add to the roll of the G-Handling DC check.</p>
+    <p>Specializations: Every time someone is qualified to specialize in G-Handling, they may choose to add +1 to their G-Handling checks as a specialization.</p>
+</div>
+
+<div>
+    <h4>Melee</h4>
+    <p>While unarmed CQC training helps operatives survive in close quarters engagement, the combatants who are crazy enough to train into melee thrive in the chaos of close quarters engagements.  As the weapons in the future have been progressively growing in power and lethality, a few have used this time to hone their own bodies to wield primitive weapons to deadly effect. Melee attacks are made against unarmed/dodge or other melee attacks, whichever the defender chooses.</p>
+    <p>Complexity: Complexity adds to the threat range of the attacker by 1 meter per. Complexity also grants the user a reactive attack capability of 1 per complexity per round.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Weapon Specialization:</dt>
+        <dd>A character may choose to specialize in a melee weapon of their choice, granting +1 to all rolls made with that weapon type.</dd>
+        <dt>Dual Wield Mastery</dt>
+        <dd>By picking this specialisation, anyone wielding multiple weapons may still chose to add their strength to their damage.</dd>
+        <dt>Tactical Footing</dt>
+        <dd>This character may make a 1 meter step after a melee or unarmed/dodge skill check( standard attacks, reactionary attacks and defensive attacks apply). The user of this ability may only do so a number of rounds equal to their complexity in melee. This 1 meter step will not incur an attack of opportunity.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Heavy Weapons</h4>
+    <p>A heavy weapon is defined as a personnel carried weapon that acts as a force multiplier for troops.  Machine guns are carried to suppress enemies while others move to objective locations, Grenades can indirectly fire at troops behind cover, Missiles can handle enemy armored vehicles, and mortars provide mobile artillery that can strike an enemy with precision anywhere on the battlefield.  A character uses his heavy weapons skill against an opposing players defense check.</p>
+    <p>Complexity: Complexity is defined by the weapon being carried, a complexity that is not met by the weapon takes penalties of the difference, but never will take a benefit of the difference.</p>
+    <p>Specializations:Pick one: Machine-guns, Rocket Launchers, Grenade Launchers, Mortars, Special Purpose Heavy Weapons; add +1 to the selected type on Heavy Weapons rolls.</p>
+</div>
+
+<h3>Creativity Skills:</h3>
+
+<div>
+    <h4>Electronic Warfare</h4>
+    <p>Electronic warfare is the capability of a character to operate the sensors and jamming systems of a vehicle.  A character who wishes to scan the area with their sensors must make an E-warfare check just like someone rolling a notice skill.  Operating Electronic Countermeasures is a bit more complex than a single check as it has various functions.</p>
+    <dl>
+        <dt>Jam Communications:</dt>
+        <dd>An ECM is allowed to jam communications within its range with an E-warfare check against any comm signals that are trying to push through. Roll a reactionary E-warfare check against opposing Communications checks.</dd>
+        <dt>Hide Signal:</dt>
+        <dd>Normally when operating a vehicle, only the speed, size, distance and cover can help hide it from sensors.  With an ECM a player can add all of those benefits with an E-Warfare check to hide the signature.</dd>
+        <dt>Jam Missile Lock:</dt>
+        <dd>An ECM is capable of blocking a single missile lock per round (Per Complexity), Immediately after a lock is obtained an ECM must make a reactionary roll to deny the lock against the attackers gunnery check. If successful, the lock fails and the missiles may only be dumb fired.</dd>
+    </dl>
+    <p>Complexity: Complexity in Electronic warfare allows for additional reactionary E-warfare attempts.  This includes jamming multiple outgoing communications signals per round, missile locks, and ECCM counter jamming. A character untrained in E-Warfare cannot make reactionary rolls with this skill.  AI is always treated as having CPX 1 in this manner.</p>
+    <p>Specializations: Choose a feature to specialize in (Hide Signal, Sensors,Jam Missiles)</p>
+</div>
+
+<div>
+    <h4>Craft</h4>
+    <p>Craft represents a character’s ability to build, upgrade and repair items of a specific nature. Craft is used whenever a character attempts to construct or repair the object or class of object chosen when the skill is leveled (Note: Craft is typically does not overlap with items constructed or repaired with Demolitions, Mechanics, Electronics or Forgery). Acts of carpentry, glassblowing, metallurgy and artistry can all be viable applications of the Craft skill. Specific time and material constraints of this skill are highly dependent upon the nature of the crafting, and as such, this skill is highly subject to your Game Master's discretion.</p>
+    <p>Complexity: A high Craft complexity allows for more effective, more complex and more beautiful applications of the chosen craft skill. This is reflected in a +1 to the user’s Craft check for each complexity the user has.</p>
+    <p>Specializations: Crafting Specialization is simple enough to add a +1 each time a Crafting specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Tinker</h4>
+    <p>Tinker represents a character’s ability to perform small scale repair and construction actions, from quality of life fixes to creating normal ammunition to jury-rigging items for short term use. Tinker is used whenever a character attempts to perform a construction or repair on an object smaller than a vehicle or drone OR to repair or build something outside of an appropriate setting or without appropriate tools (building a lockpick out of a spool of wire or fixing a tire outside of a garage would both be examples of Tinker checks).</p>
+    <p>Complexity: Complexity always adds to the roll of Tinker check.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Ammo Specialist</dt>
+        <dd>Can build specialized ammunition for the ½ cost of the round in raw materials, given appropriate resources (GM Discretion). One round can be produced this way every five minutes.</dd>
+        <dt>Jury-Rigger</dt>
+        <dd>Can make repair rolls as normal using the Tinker skill; however, the next time the repaired target takes damage, it immediately suffers an additional damage result due to the haphazard nature of the repair.</dd>
+        <dt>Junkyard Savant</dt>
+        <dd>You can use the Tinker skill to assist with mechanics, mechanical design, electronics or electronic design checks.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Demolitions</h4>
+    <p>Usually every obstacle in game will provide the opportunity for problem solving among the player characters.  No obstacle solution is as flexible as the age old use of explosives.  Demolitions determines the character's ability at setting and priming explosives for use against doors,walls,barriers, vehicles and booby traps.  When attempting to set Demolitions, the player rolls on the spot to see how well the explosive is located, timed, and measured.  Undercutting the explosive could mean not blasting a hole large enough into a wall, overplacement could mean severe damage and loss of life.</p>
+    <p>The Obstacle: A player first must choose an obstacle to blast a hole through, if this obstacle is a vehicle, it will use its armor value (shields cannot be taken against demo charges that are placed on the hull).  (Example: an average wall has 50 armor)</p>
+    <p>The Tools: A demolition kit will contain primers, cutters, cords and fuses to handle explosives.  A character will need this to use explosives.</p>
+    <p>Using The Right Amount Of Explosives: Explosives must be measured by using a formula to calculate explosive damage.</p>
+    <p>The Explosives Damage Formula is calculated here: DMG of Charge - (Square root of Explosive Units rounded down) x Personnel DMG of single unit.</p>
+    <p>The damage of the Explosive will be measured against the object’s armor.  For walls and barriers, every armor threshold the explosive damage breaks, it will clear a one meter opening.</p>
+    <p>Setting the Explosive: Setting up Explosives properly will take a character 30 Seconds (5 Rounds). This is only allowed against inanimate or unattended objects.  All inanimate objects will have a base DC of 3 for Demo checks.</p>
+    <p>Rush Setting or Throwing: When an Object is placed or thrown in a hurry against an object or a vehicle it will always receive a -2 to its demo check.  In addition, if the object is thrown onto or under a vehicle, the character must roll their throw skill (with weight and range penalties) against an enemy's defense check.  This is an opposed check and does not allow added complexity.  If the Explosive rolls, the Vehicle only takes Secondary area damage.</p>
+    <p>Tamping the Charge: Tamping the charge forces the explosive into a certain direction by shaping the explosive, sandbagging or blocking backblast, or using a designed shape charge.  Tamping a charge generally takes another 30 seconds and will grant a +2 to Demo checks, as well as removing the explosives secondary area of explosive damage.</p>
+    <p>Example: Anders wishes to blow up a wall with a standard satchel charge. The charge contains 10 plastic explosives(Personnel Damage of 35 each), which produces a total Personnel DMG of (square root of 10) x 35) = 110. The GM has determined that the wall has a Personnel Armor value of 100 (a reinforced concrete or brick wall).</p>
+    <p>Example: Anders runs forward with a satchel charge (-2) and places it with a fuse on the object, his total skill check including his complexity results in a 5.  The damage is measured against the 100 armor wall with a base DC of 3.  This roll produces an MoS of 2, for a total of 220 points of damage. Anders is able to blow a hole in the wall big enough for a size 2 vehicle to squeeze into. (220/100 = 2 Meter Diameter hole)</p>
+</div>
+
+<div>
+    <h4>Forgery</h4>
+    <p>Forgery represents a character’s skill in creating convincing replicas of official documents, identification cards, transponder codes, etc. and related minutiae (signatures, seals, etc.). Creating a forgery takes a number of minutes equal to the complexity of the item being forged x5. The Forgery skill is used whenever a character attempts to fool a target into thinking that their forgery is official and legitimate. Forgery rolls are often rolled against opposed Investigation checks for detection.</p>
+    <p>Complexity: Complexity sets the difficulty of the opposed check to discover a forged item.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Fast Forger</dt>
+        <dd>Can forge an item in a number of rounds equal to the complexity of the item being forged x5, rather than minutes.</dd>
+        <dt>Impressive Fake</dt>
+        <dd>Gives the wielder of the forged item +1 to Influence checks and Influence based skills against a target who believes it is real AND respects the purported authority of the item.</dd>
+        <dt>Fine at a Glance</dt>
+        <dd>The forged item can only be detected if the investigator’s complexity is equal to or greater than the forger’s.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Drive</h4>
+    <p>Drive represents a character’s skill in safely operating ground-based vehicles. Drive is used whenever a character attempts to operate a ground vehicle in a high speed or otherwise difficult situation to drive in. Drive checks are also made defensively when a piloted vehicle is fired upon.</p>
+    <p>Complexity: Complexity is used against the vehicle being driven.  It can also be added to non opposed Drive checks.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Need for Speed</dt>
+        <dd>Can drive a vehicle 1 Speed faster than its profile.</dd>
+        <dt>Stunt Driver</dt>
+        <dd>Can treat a vehicle’s maneuver as being 1 higher than its profile.</dd>
+        <dt>Defensive Driver</dt>
+        <dd>Can reroll a single 1 on a Drive check per session (Design note: treat as Lucky).</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Teaching</h4>
+    <p>Teaching represents a character’s skill in communicating knowledge to other characters. Teaching is used when increasing another character’s skills over their cap of one skill and one complexity per month (in place of raising the teacher’s own skill or complexity). When using the Teaching skill, the highest skill level a character can be “taught” is the lower of the teacher’s complexity in Teaching or their rank in the skill being taught.</p>
+    <p>Complexity: The teacher’s complexity is one value used when calculating the highest rank a character can be taught in a given skill.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Scholar: </dt>
+        <dd>Allow another character to reroll a knowledge check once per session.</dd>
+        <dt>Senior Instructor:</dt>
+        <dd>May teach an additional skill or complexity per month.  (Or teach one skill and one complexity without sacrificing their own training.)</dd>
+        <dt>Inspirational: </dt>
+        <dd>Instead of training a character up (1 skill/1 complexity) use this time instead to give an ally character an inspiration dice.  Can be done only once a month, must be done before session start.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Tactics</h4>
+    <p>Tactics represents a character’s skill in recognizing common tactics used by opposing security and military forces. Tactics is used when attempting to evaluate movement patterns and tactical decisions that opposing squad level forces will take. A successful tactics check will allow for a prediction of enemy movement and positions in a tactical environment. This prediction information comes from the Game Master as a form of direct information on most likely their course of action.  If the check is failed, information will come back incomplete or missing.  A MOF of 4 or more could possibly yield false information, misleading the PC’s to take the wrong course of action.</p>
+    <p>Example Difficulty checks:</p>
+    <ul>
+        <li>(DC 3) Unorganized Scavengers or Raiders</li>
+        <li>(DC 4) Militia or basic security teams</li>
+        <li>(DC 5) Trained infantry</li>
+        <li>(DC 6) Well trained Operatives</li>
+        <li>(DC 7) Super intelligent agents</li>
+    </ul>
+</div>
+
+<div>
+    <h4>Survival</h4>
+    <p>Survival represents a character’s ability to survive in the untamed wilderness. The Survival skill is used to locate food and water, create shelter and track creatures of all shapes and sizes in the wilderness.</p>
+    <p>Complexity: Complexity always adds to the roll of Survival check.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Tracker:</dt>
+        <dd>When using Survival to track, the character also knows the approximate number and type of creatures being tracked, as well as their speed of travel.</dd>
+        <dt>Impromptu Builder:</dt>
+        <dd>The character is always capable of using the available resources to construct shelter.</dd>
+        <dt>Wilderness Tolerance:</dt>
+        <dd>When the character uses the Survival skill to construct a shelter, the shelter constructed by the character has the HEP(Heat) and HEP(Cold) qualities.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Space Pilot</h4>
+    <p>Complexity: Complexity is used against the spacecraft being flown.  It can also be added to non opposed flight checks. (Such as landing or obstacles)</p>
+    <p>Specializations: A specialization can be chosen off of a favored spacecraft type: Fighter, Scout, Heavy Fighter, Transport, Heavy Transport, Corvette, etc. Specializing in this type of spacecraft gives a +1 to all Space Pilot rolls when using that type of spacecraft.</p>
+</div>
+
+<div>
+    <h4>Disguise</h4>
+    <p>Disguise represents a character’s ability to pretend to be someone other than themselves. The Disguise skill is used to create the physical appearance of being someone else or filling a role that the character does not. Disguise is also used to conceal weapons. The physical nature of the disguise means that it is opposed by Notice checks. The amount of time needed to Disguise depends heavily upon the disguise being made, and the means being used to do so, but always takes at least one round.</p>
+    <p>Complexity: Complexity is used against the Notice check of the observing party.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Make-up Artist</dt>
+        <dd>The character is capable of using their Disguise skill to obscure other characters, given appropriate resources.</dd>
+        <dt>Impressive Disguise</dt>
+        <dd>Gives the wielder of the disguise +1 to Influence checks and Influence based skills against a target who believes it is real AND respects the purported authority of the disguise.</dd>
+        <dt>Master of Disguise</dt>
+        <dd>A Master of Disguise can change in and out of a disguise in one round.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>First Aid</h4>
+    <p>
+        The First Aid skill judges a character's ability to perform medical treatments in the field or in triage environments. First Aid performs medical treatment for:Stabilizing Wounded: First Aid may Stabilize wounds for characters so they may use non exerting skills. (see Stabilization)
+        Applying Splints or Movement aids: Can use first aid to stabilize movement and allow for Walking movement speed, (DC 4+ Injuries)
+        Stopping Bleeding: Can use first aid to help stop bleeding on wounded characters (see Bleeding)
+        Awakening Unconscious Characters: May use First Aid to Attempt to Awaken Unconscious Characters (See Knockout)
+        Long Term Care: May Apply Long Term Care just as in Life Sciences (Medicine) albeit with the First Aid skill.
+    </p>
+    <p>Complexity: The Complexity of First Aid adds to First Aid checks as well as allowing the character to use more advanced medical equipment for the purposes of First Aid.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Combat Medic:</dt>
+        <dd>The character gains a +1 bonus to stabilizing bleeding allies.</dd>
+        <dt>Advanced Resuscitation:</dt>
+        <dt>The character gains a +1 bonus to resuscitating downed allies, and can even attempt the resuscitate a character who has been declared dead for 1 minute.  (Not including Instant Deaths)</dt>
+        <dd>Off the X:</dd>
+        <dd>The character gains +1 to first aid checks when splinting wounded hindered allies.  The character giving first aid can also create a splint without any tools on hand as a full round action (with a -2 penalty).</dd>
+    </dl>
+</div>
+
+<h3>Knowledge Skills:</h3>
+<div>
+    <h4>Bureaucracy</h4>
+    <p>The Bureaucracy skill judges a character's ability to effectively navigate a burdensome governmental structure or to recall knowledge related to specific bureaucracies.</p>
+    <p>Complexity: The Complexity of Bureaucracy adds to Bureaucracy checks; additionally, a lower complexity may result in a penalty on the Bureaucracy check attempted against particularly complex structures at the DM’s discretion.</p>
+    <p>Specializations: Bureaucracy Specialization is simple enough to add a +1 each time a Bureaucracy specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Security</h4>
+    <p>The Security skill judges a character's ability to identify specific vehicles, drones and other combat gear, as well as recall their strengths and weaknesses. Additionally, it allows a character to attempt to discern the relative level of protection of a site or building based on its hardware (cameras, motion sensors and the like also fall into this category).</p>
+    <p>Complexity: The Complexity of Security adds to Security checks; additionally, a lower complexity may result in a penalty on the Security check attempted against particularly complex systems or gear at the DM’s discretion.</p>
+    <p>Specializations: Security Specialization is simple enough to add a +1 each time a Security specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Mechanics</h4>
+    <p>The Mechanics skill judges a character's ability to repair and build vehicles, drones, and powered armors. Repairs and construction are conducted as follows:</p>
+    <p>In order to build or repair with Mechanics, a character will need the location and tools required to start.  If the character has access to a garage or hangar bay, they may build if they also have basic mechanic tools. Additionally, a character cannot make Mechanics checks untrained.</p>
+    <p>
+        Building New Vehicles: To start building a vehicle from Mechanical Design, they will calculate their cost from the vehicle builder.  Gathering the materials to build a new vehicle takes 80% of the total vehicle’s cost as stated in the creation guidelines.  After the materials are gathered, a player must calculate the labor points required to build a vehicle/drone/armor.  The labor points required to build a vehicle will be calculated by this formula:
+        Vehicles Labor Points Required = (Chassis Size * Core Size)
+        To start building a vehicle/drone/armor, the character must calculate the amount of labor points he or she can put out in one day. The formula for labor points is stated below.
+        Players Available Labor Points = (5 * (Mechanics Skill + Mechanics Complexity))
+        A character may enlist others to aid in building a vehicle by adding their labor points to his own. A player's labor points may not be able to finish a mechanical task on a vehicle in one day, if this is the case, the work will continue on the next day.  If a player and his allies have more than twice than the vehicle’s required labor points, then the leading mechanic (below) can make two Mechanics rolls during a day.
+
+        Completing the task of building a vehicle:  Every task attempt by a character and his allies equates to a Mechanics check from the leading mechanic (whoever is designated as the character rolling the skill check).  Each time a task is attempted the lead mechanic rolls a Mechanic’s skill check against a threshold of 4. The MOS goes towards the completion of the vehicle. The vehicle is finished being built when the total MOS of the construction is equal to or greater than the vehicle's total required labor points.
+    </p>
+    <p>
+        Repairing Damaged Vehicles/Drones/Armor: Repairing a mechanical object works much like building one except it comes with its own formula for calculating damages.
+        Repair Labor Points Required = (Total Damage points taken * Complexity)
+        Cost of repair Parts Per Dmg Point ( 1000 * Build complexity*Vehicle Size)
+        *Calculate Vehicle Size by the section damaged.
+        Auxiliary Systems that are destroyed or damaged must also be replaced individually, count their replacement cost as
+        (5,000 Cr x Perk cost)
+    </p>
+    <p>Complexity: The Complexity of Mechanics check is compared to the target being repaired or created, and a bonus or penalty is levied accordingly. Additionally, Complexity in the Mechanics skill is used to generate additional labor points as stated above.</p>
+    <p>Specializations: Mechanics specializations can be taken in a class of vehicle, such as Exo-Suits, Flyers, Hover, Capital Ships, etc. These specializations grant a +1 to Mechanics checks to create or repair the chosen type of vehicle.</p>
+</div>
+
+<div>
+    <h4>Mechanical Design</h4>
+    <p>The Mechanical Design skill judges a character's ability to conceptualize new vehicles and exo-suits, and turn these concepts into working schematics. Mechanical Design has its own section dedicated to outlining the process used to create a design; please refer to it for further details.</p>
+    <p>Complexity: The Complexity of Mechanical Design check is compared to the target vehicle being designed, and a bonus or penalty is levied accordingly.</p>
+    <p>Specializations: Mechanical Design specializations can be taken in a class of vehicle, such as Exo-Suits, Flyers, Hover, Capital Ships, etc. These specializations grant a +1 to Mechanical Design checks to design the chosen type of vehicle.</p>
+</div>
+
+<div>
+    <h4>Life Sciences</h4>
+    <p>The Life Sciences skill judges a character's ability to recall ecological knowledge pertaining to local wildlife, alien biology, or advanced applications of human biology (substituting human for the character’s race if the character is not human) and related knowledge.</p>
+    <dl>
+        <dt>Medicine:</dt>
+        <dd> Life Sciences (Medicine) allows for The application of medication that can be in addition to health checks (as per medication requirements.  In order to use LS Medicine in this manner, the character with the skill must personally administer the medication. (unless they are pills, then the administering character must just be in the vicinity.)</dd>
+        <dt>Long Term Care:</dt>
+        <dd>A character with Life Sciences may administer long term care to as many patients as their complexity in the skill at a time.</dd>
+        <dt>Microorganisms:</dt>
+        <dd>This skill is used to identify and treat toxins. Every Toxin will have a treatment DC and Identification ID associated with it. The identification ID can be bypassed if the characters would have ingame knowledge of what Toxin is used.</dd>
+        <dt>Zoology:</dt>
+        <dd>The practice of studying creatures in their habitats and reproductive means. Zoology checks are used to determine traits of species, habits, and weaknesses.</dd>
+        <dt>Botany:</dt>
+        <dd>Botany studies and identifies plants traits (both dangerous and beneficial).  This can be used to find alternative medicine and toxins.  Unidentified species are often worth quite a lot to scientific organizations.</dd>
+    </dl>
+    <p>Complexity: The Complexity of Life Sciences adds to Life Sciences checks; additionally, a lower complexity may result in a penalty on the Life Sciences check attempted against particularly complex creatures or ecosystems at the DM’s discretion.</p>
+    <h5>Specializations: <span>(Life Sciences Specializations branches off into 4 different fields)</span></h5>
+    <dl>
+        <dt>Medicine:</dt>
+        <dd>Specializing in Medicine will allow for +1 to Dosage Rolls.</dd>
+        <dt>Microorganisms:</dt>
+        <dd>This specialization will give a +1 to notice checks and identification checks against any biological weapons, toxin, or disease.  This also gives +1 to all medicine checks against any toxin or diseases.</dd>
+        <dt>Zoology:</dt>
+        <dt>Zoology adds +1 to animal handling checks and adds a +1 to any checks made that relate to a creatures habits, activities, and breeding.</dt>
+        <dd>Botany:</dd>
+        <dd>Botany specialization will allow a character to attempt to recognize and identify traits of rare plant species that may not have been discovered yet.  With the Botany specialization a character will automatically identify plants as being not being discovered yet.  This also adds +1 to any Botany related checks.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Law:</h4>
+    <p>The Law skill judges a character's ability to effectively recall information about a society’s legal system and utilize the legal structure to achieve the character’s desires.</p>
+    <p>Complexity: The Complexity of Law adds to Law checks; additionally, a lower complexity may result in a penalty on the Law check attempted against particularly complex legal systems at the DM’s discretion.</p>
+    <p>Specializations: Law Specializations can be taken for specific legal roles (examples include Judge, Defender, Prosecutor); this will grant +1 to Law checks when the specialization is relevant.</p>
+</div>
+
+<div>
+    <h4>Physical Sciences</h4>
+    <p>The Physical Sciences skill judges a character's ability to recall knowledge pertaining to physics, advanced applications of gravity, geology, planetary anomalies and similar phenomena. Additionally, Physical Sciences is used for identifying most technical applications of xeno-technology.</p>
+    <p>Complexity: The Complexity of Physical Sciences adds to Physical Sciences checks; additionally, a lower complexity may result in a penalty on the Physical Sciences check attempted against particularly obscure phenomena or complicated xeno-technology at the DM’s discretion.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Physics:</dt>
+        <dd></dd>
+        <dt>Earth Science:</dt>
+        <dd></dd>
+        <dt>Astronomy:</dt>
+        <dd></dd>
+        <dt>Chemistry:</dt>
+        <dd></dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Electronics</h4>
+    <p>The Electronics skill determines the characters familiarity with the internals of electronic hardware. A person with a high electronics check may alter the hardware of any electronic device to their means.  Auxiliary systems that are damaged can be temporarily repaired by bypassing power through an electronics check.</p>
+    <p>
+        Bypassing Auxiliaries: Damage dealt to an auxiliary system can be repaired by someone in a pinch by using Electronics.  The Complexity of the system to be bypassed is determined by the (Mech) Complexity of the object.  If there is no apparent (Mech) Complexity to the object, the GM may assign one according to the difficulty of the task. The DC and threshold required of the task is usually determined by 3+(total Damage taken). Bypassing an Auxiliary is a full round action.  If the vehicle has multiple sections, only count the damage to the section with the Auxiliary system being bypassed.
+        Bypassing auxiliaries is a temporary fix, and in order to remove the damage from the system itself, it must be repaired using traditional repair methods.
+        Restoring Power: Vehicles that suffer power transfer failure or EMP shut down may be restored with an Electronics Check. This is treated much like Bypassing an Auxiliary, except it takes 1 minute for each Power Restoration attempt.
+        Repairing Electronics: Mechanics tend to replace damaged Comms, Computer Systems, Sensors and ECMs, while Electricians will usually take the time to repair them. Characters may use Electronics to repair damage done to specific systems in place of Mechanics for half of the base repair cost. (See Mechanics)
+    </p>
+    <p>Complexity: Complexity of Electronics is tested against the Complexity of the equipment it is being performed on.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Hot-Wire:</dt>
+        <dd>The Hot-Wire specialization gives a +1 to rolls that bypass computer systems by altering hardware. (Example: Opening doors, Removing Physical Data, Hijacking Enemy systems)</dd>
+        <dt>Power Failsafe:</dt>
+        <dd>The character may add EMP Hardening (1) (non-stacking) to the equipment carried by a number of characters equal to his skill level.  This EMP Hardening must be done during down time. This EMP Hardening only applies as long as the character with this specialization is present.</dd>
+        <dt>Tech-Savvy:</dt>
+        <dd>If the character uses electronics to repair damage to Comms, Computer Systems, Sensors and ECMs, the character gains +1 to their electronics check.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Electronic Design</h4>
+    <p>Complexity:</p>
+    <p>Specializations:</p>
+</div>
+
+<div>
+    <h4>Social Sciences</h4>
+    <p>The Social Sciences skill judges a character's ability to recall knowledge pertaining to societal ethos, cultural phenomena, language groups, cultural xenology and related knowledge.</p>
+    <p>
+        Linguistics: The amount of languages known is equal to (1 + Knowledge + Social Science Complexity) to a minimum of 1.
+        Archeology: This measures the ability to identify known ancient treasures or cultural links to found items of significance.
+        History: Gives the capability to recall information about obscure history that will pertain to mission.
+        Psychology:
+    </p>
+    <p>Complexity: The Complexity of Social Sciences adds to Social Sciences checks; additionally, a lower complexity may result in a penalty on the Social Sciences check attempted against particularly obscure phenomena or unusual geology at the DM’s discretion.</p>
+    <p>Specializations: Social Sciences Specializations can be taken for specific phenomena or field of study (Archeology, History, Linguistics, Psychology); this will grant a +1 to Social Sciences checks when the specialization is relevant.</p>
+</div>
+
+<div>
+    <h4>Computers</h4>
+    <p>The Computer skill judges a character's ability to communicate to machines. The skill covers multiple operations that can be performed.</p>
+    <p>
+        Hacking: The art of accessing non authorized computers.  This function performs as an attack against an encryption defense or a Counter-Hacking roll.
+        Counter-Hacking: Sometimes an Encrypted drive is not enough, A character may manually counter hack when a threat is detected, taking over the automated defense checks.
+        Drone Jacking: After a WIR port is identified, a Computer check can be made to jack into drone’s.  Drones can be controlled for a short period of time directly or commanded to do a function included on their AI Command list.
+        Drone Controlling: Having a knowledge in computer systems gives you the tools needed to maintain and operate drones around you.  Computers (Drone Controlling) Will allow you to bring a Drone NPC who will operate at the Drone controllers commands given that the character has some kind of drone controlling device equipped.  The strength and amount of Drones that may be brought are determined by the characters Computer skill Complexity.  The Accumulated level of AI controlled must be equal to or less than the characters Computer skill complexity. A Specialization in Drone controlling Adds 1 to the amount of cumulative AI levels that can be controlled at once.
+        Software Guru: Day to day computer operations which include information Gathering, Downloading Data, operating complex systems.
+    </p>
+    <p>Complexity: Is based off of the computer system that is being operated.  AI chips set their own complexities, when hacking a computer, the complexity of the Encryption drive sets the CPX of the hack, unless it becomes Counter-Hacked in which the CPX is set by the highest of the encryption drives and the users CPX rating.</p>
+    <p>Specializations: +1 to one of the following (Hacking, Counter-hacking, Drone Jacking,Drone-Controlling, Software Guru.)</p>
+</div>
+
+<div>
+    <h4>Communications</h4>
+    <p>The Communications skill judges a character's ability to utilize communications equipment over various distances and through various mediums. Communications checks are most often made when a character attempts to communicate across long distances using a technological medium. The check DC is determined as follows:</p>
+    <p>
+        Basic Communications distance (dependant on equipment): DC 1
+        Past Communications distance up to 2x:   DC 4
+        DC Modifiers:  Static interference(+1-4), Urban Environment (+2), Jungle (+1), Underground (Halves base comm range, +2), Jamming (add opponent's ECM/Electronics Warfare roll to DC.)
+    </p>
+    <p>Calling in a strike: Certain weapons allow the use of Communications as an attack type.  (IE calling in airstrikes, laser designating locks.)  A character who wishes to call Indirect fire on a target or use a laser designator to acquire a lock for an allies weapons system may do so if that allies weapon is within range. The character calling in the strike may roll his Communications check along with the ally who is firing the weapon system.  The lower of the two rolls is used as the appropriate attack roll for that weapon system.</p>
+    <p>Complexity: The Complexity of the Communications check is dependant on the Complexity of the equipment being used to communicate. If the character’s complexity in Communications is higher than that of the equipment, the difference in Complexity will be added to the Communications roll. The opposite is true if the Communications Complexity is lower than that of the equipment.</p>
+    <p>Specializations: Communications Specializations can be taken for specific communication systems or media (examples include Shipboard Communications, Personnel Communications, Exo-Suit Communications, etc.); this will grant a +1 to Communications checks when the specialization is relevant.</p>
+</div>
+
+<div>
+    <h4>Navigation</h4>
+    <p>The Navigation skill judges a character's ability to orient themselves geographically and travel unassisted over long distances. Navigation checks are most frequently made when attempting to find the character’s own location when lost, or to travel to a destination by means other than a clearly defined map or coordinate system.</p>
+    <p>Complexity: The Complexity of Navigation adds to Navigation checks; additionally, there is Navigation oriented equipment that cannot be used unless the character’s Navigation Complexity is equal to or greater than the Navigation equipment.</p>
+    <p>Specializations: Navigation Specializations can be taken for specific navigation systems(examples include Shipboard Navigation, Land Navigation, Stellar Navigation, etc.); this will grant a +1 to Navigation checks when the specialization is relevant.</p>
+</div>
+
+<h3>Influence Skills</h3>
+
+<div>
+    <h4>Haggling</h4>
+    <p>The Haggling skill judges a character's ability to negotiate prices and gain deals in a mercantile setting. Haggling skill checks are typically rolled when purchasing or selling goods, and are typically opposed by the Haggling of the other party.</p>
+    <p>Haggling Discount percentage= (Complexity*Influence)</p>
+    <p>To make a Haggling check, roll opposed Haggling skill checks with target trader.  The MOS of your Haggle check is multiplied by the Discount Percentage (determined above) to determine the final discount. Note: MOF will not increase the price, but may worsen the shopkeeper’s disposition towards the Haggling character at the DMs discretion.</p>
+    <p>Complexity: The Complexity of Haggling adds to the discount percentage.</p>
+    <p>Specializations: Haggling Specialization is simple enough to add a +1 each time a Haggling specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Bluff</h4>
+    <p>The Bluff skill judges a character's ability to bend the truth or outright lie to other characters. Bluff skill checks are typically rolled when telling lies to a suspicious party, and are automatically opposed by the Human Perception. Additionally, a character may use Interrogation to roll an additional check against a character's Bluff. Using Interrogation in this way may worsen the target’s disposition, at the GM’s discretion. (See Interrogation)</p>
+    <p>Complexity: The Complexity of Bluff sets the difficulty of the opposed check.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Slippery</dt>
+        <dd>The character gains a +1 to Bluff checks to beat opposing Human Perception checks.</dd>
+        <dt>Tough Nut to Crack</dt>
+        <dd>The character gains a +1 to Bluff checks to beat opposing Interrogation checks.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Leadership</h4>
+    <p>Leadership determines a character’s ability to evaluate a combat and communicate tactical advice to their allies in the chaos of battle. On the ground, Leadership allows for bonuses to be given to allied combatants in the form of orders as detailed below. In the air, a leader may command a wing or a multi-crewed ship and use leadership and quick thinking in place of their allies’ combat sense (placing his crew in any order he sees fit during that initiative step).</p>
+    <p>Complexity: Complexity is added to the Leadership roll.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Ground movement Orders:</dt>
+        <dd></dd>
+        <dt>Fire on my target:</dt>
+        <dd> Leadership check DC 4(+1 per person commanded). Standard action command. Mark a target within sight for priority, all shooters who accept order gain an immediate aim dice towards target, aim dice is lost at end of round.</dd>
+        <dt>Break Suppression:</dt>
+        <dd>Leadership check versus suppressive fire roll(+1 per person commanded). Quick action. All characters who accept order immediately pass Willpower checks from suppressive fire.</dd>
+        <dt>Covering Fire:</dt>
+        <dd>DC 4(+1 per person commanded). Covering fire. Quick action. All characters who accept the order and commence suppressive fire will add a +1 difficulty bonus against any enemies’ Willpower check to break suppression; additionally, all Suppressed enemies will suffer a 1 die penalty to offensive actions for every character laying suppressive fire on them until the end of the round.</dd>
+        <dt>Snap out of it!:</dt>
+        <dd>DC 6.  One character may be selected who is currently dazed by a failed combat sense.  This person is snapped back into the fight at the end of the combat sense order.</dd>
+        <dt>Work through the pain</dt>
+        <dd>DC 6. One character may remove an amount of wound penalties up to the MOS of the leadership check for one non combative skill check.</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Interrogation</h4>
+    <p>The Interrogation skill judges a character's ability to find the truth of a situation. Interrogation skill checks are preceded by specific queries, and then typically rolled in opposition to the Bluff of the other party. A successful Interrogation result would tell if the opposing character is lying or not.</p>
+    <p>Forceful Interrogation: This skill, when used against an unwilling subject who refuses to disclose any information, is opposed by Willpower and a successful Interrogation check forces an answer from the subject. (This answer may also be a lie, however if so, it will directly result in a Bluff check.)</p>
+    <p>Complexity: The Complexity of Interrogation is compared to the difficulty of the opposing Bluff check.</p>
+    <p>Specializations: Interrogation Specialization is simple enough to add a +1 each time a Interrogation specialization is taken.</p>
+</div>
+
+<div>
+    <h4>Animal Handling</h4>
+    <p>The Animal Handling skill judges a character's ability to train, manipulate or otherwise order animals. Animal Handling skill checks are typically rolled when interacting with animals, and are typically opposed by the Instinct of the animal being handled.</p>
+    <p>Animal Companion: when this specialization is taken, a character gains access to an animal Ally that scales with the characters animal handling level.</p>
+    <p>Complexity: The Complexity of the animal handler is measured against the instinct of the animal.</p>
+    <h5>Specializations:</h5>
+    <dl>
+        <dt>Animal Companion</dt>
+        <dd></dd>
+        <dt>Sooth instincts</dt>
+        <dd></dd>
+        <dt>Dominant Species</dt>
+        <dd></dd>
+
+    </dl>
+</div>
+
+<div>
+    <h4>Diplomacy</h4>
+    <p>The Diplomacy skill judges a character's ability to generate good will towards himself in a social setting. Diplomacy skill checks are typically rolled when asking for favors, displaying social etiquette or gaining a character’s trust, and are typically opposed by the Diplomacy or Human Perception of the character being interacted with. (Note: By its nature, Diplomacy is a particularly nonquantitative skill; therefore, MoS, MoF and its effects are largely subject to DM’s discretion)</p>
+    <p>Complexity: The Complexity of Diplomacy sets the difficulty of the opposed check.</p>
+    <p>Specializations: Diplomacy Specialization is generalist in nature, therefore, it will add a +1 each time a Diplomacy specialization is taken.</p>
+</div>

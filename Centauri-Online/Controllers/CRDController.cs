@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Centauri_Online.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,12 +12,6 @@ namespace Centauri_Online.Controllers
     {
         // GET: CRD
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: Weapon
-        public ActionResult Weapon()
         {
             return View();
         }

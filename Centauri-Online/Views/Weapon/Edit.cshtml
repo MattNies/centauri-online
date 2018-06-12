@@ -1,0 +1,76 @@
+﻿@model Centauri_Online.Models.WeaponModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>WeaponModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Damage" class="control-label"></label>
+                <input asp-for="Damage" class="form-control" />
+                <span asp-validation-for="Damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accuracy" class="control-label"></label>
+                <input asp-for="Accuracy" class="form-control" />
+                <span asp-validation-for="Accuracy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateOfFire" class="control-label"></label>
+                <input asp-for="RateOfFire" class="form-control" />
+                <span asp-validation-for="RateOfFire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseRange" class="control-label"></label>
+                <input asp-for="BaseRange" class="form-control" />
+                <span asp-validation-for="BaseRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ammo" class="control-label"></label>
+                <input asp-for="Ammo" class="form-control" />
+                <span asp-validation-for="Ammo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Complexity" class="control-label"></label>
+                <input asp-for="Complexity" class="form-control" />
+                <span asp-validation-for="Complexity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cost" class="control-label"></label>
+                <input asp-for="Cost" class="form-control" />
+                <span asp-validation-for="Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Extra" class="control-label"></label>
+                <input asp-for="Extra" class="form-control" />
+                <span asp-validation-for="Extra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

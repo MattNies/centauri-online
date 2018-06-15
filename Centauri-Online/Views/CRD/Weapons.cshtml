@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Centauri_Online.Models.WeaponModel>
+
+@{
+    ViewData["Title"] = "Weapons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Weapons</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accuracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateOfFire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ammo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complexity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MajorTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinorTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Damage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Accuracy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RateOfFire)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BaseRange)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ammo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complexity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Extra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MajorTag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinorTag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

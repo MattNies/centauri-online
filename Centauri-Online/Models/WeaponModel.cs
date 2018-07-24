@@ -25,6 +25,8 @@ namespace Centauri_Online.Models
         public string Extra { get; set; }
 
         // used to sort weapons by type
-        public List<string> Tags { get; set; }
+        public string MajorTag { get; set; }
+        public string MinorTag { get; set; }
+        public int Order { get; set; }
     }
 }

@@ -78,8 +78,26 @@
         <dd>
             @Html.DisplayFor(model => model.Extra)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorTag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorTag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MinorTag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MinorTag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>

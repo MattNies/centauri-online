@@ -11,7 +11,7 @@ namespace Centauri_Online.Controllers
 {
     public class WeaponController : Controller
     {
-        private WeaponDAO dao = new WeaponDAO();
+        private WeaponData dao = new WeaponData();
 
         // GET: Weapon
         public ActionResult Index()

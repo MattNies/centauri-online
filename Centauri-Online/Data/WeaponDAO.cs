@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Centauri_Online.Data
 {
-    public class WeaponDAO
+    public class WeaponData
     {
         private readonly string weaponDocumentName = "weapons";
 

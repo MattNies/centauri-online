@@ -11,7 +11,7 @@ namespace Centauri_Online.Controllers
 {
     public class CRDController : Controller
     {
-        private WeaponData dao = new WeaponData();
+        private GenericDataAccess<WeaponModel> dao = new GenericDataAccess<WeaponModel>(ConnectionHelper.CHARACTER_DOC_NAME);
 
         // GET: CRD
         public ActionResult Index()

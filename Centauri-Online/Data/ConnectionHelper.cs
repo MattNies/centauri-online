@@ -7,11 +7,28 @@ namespace Centauri_Online.Data
 {
     public class ConnectionHelper
     {
-        public static string DBFileName
+
+        internal static string DBFileName
         {
             get
             {
                 return @"CentauriOnline.db";
+            }
+        }
+
+        internal static string CHARACTER_DOC_NAME
+        {
+            get
+            {
+                return "character";
+            }
+        }
+
+        internal static string TRANSACTION_DOC_NAME
+        {
+            get
+            {
+                return "transaction";
             }
         }
     }

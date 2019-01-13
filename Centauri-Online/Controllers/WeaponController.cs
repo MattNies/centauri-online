@@ -11,7 +11,7 @@ namespace Centauri_Online.Controllers
 {
     public class WeaponController : Controller
     {
-        private WeaponData dao = new WeaponData();
+        private GenericDataAccess<WeaponModel> dao = new GenericDataAccess<WeaponModel>(ConnectionHelper.WEAPON_DOC_NAME);
 
         // GET: Weapon
         public ActionResult Index()

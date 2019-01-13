@@ -15,8 +15,8 @@ namespace Centauri_Online.Logic
 
         public PaymentService()
         {
-            this.charDAO = new GenericDataAccess<CharacterModel>();
-            this.transDAO = new GenericDataAccess<TransactionModel>();
+            this.charDAO = new GenericDataAccess<CharacterModel>(ConnectionHelper.CHARACTER_DOC_NAME);
+            this.transDAO = new GenericDataAccess<TransactionModel>(ConnectionHelper.TRANSACTION_DOC_NAME);
         }
 
         public bool creditAccount(CharacterModel character, decimal amount)
@@ -25,7 +25,7 @@ namespace Centauri_Online.Logic
             if (canCreditAccount(amount, charBalance))
             {
                 character.Balance = charBalance - amount;
-                charDAO.Upsert(character, ConnectionHelper.CHARACTER_DOC_NAME);
+                charDAO.Upsert(character);
                 transaction(character, null, amount, "credit");
                 return true;
             }
@@ -36,7 +36,7 @@ namespace Centauri_Online.Logic
         {
             decimal charBalance = getBalance(character);
             character.Balance = charBalance + amount;
-            charDAO.Upsert(character, ConnectionHelper.CHARACTER_DOC_NAME);
+            charDAO.Upsert(character);
             transaction(character, null, amount, "debit");
         }
 
@@ -56,12 +56,12 @@ namespace Centauri_Online.Logic
             transaction.CharacterSendId = sendChar.ID;
             transaction.CharacterRecId = recChar?.ID;
             transaction.Amount = amount;
-            transDAO.Upsert(transaction, ConnectionHelper.TRANSACTION_DOC_NAME);
+            transDAO.Upsert(transaction);
         }
 
         public decimal getBalance(CharacterModel character)
         {
-            CharacterModel dbCharacter = charDAO.Find(character.ID, ConnectionHelper.CHARACTER_DOC_NAME);
+            CharacterModel dbCharacter = charDAO.Find(character.ID);
 
             return dbCharacter.Balance;
         }

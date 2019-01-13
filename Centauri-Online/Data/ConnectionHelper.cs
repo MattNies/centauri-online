@@ -24,12 +24,9 @@ namespace Centauri_Online.Data
             }
         }
 
-        internal static string TRANSACTION_DOC_NAME
-        {
-            get
-            {
-                return "transaction";
-            }
-        }
+        internal static string TRANSACTION_DOC_NAME { get { return "transaction"; } }
+
+        internal static string WEAPON_DOC_NAME { get { return "weapons"; } }
+
     }
 }

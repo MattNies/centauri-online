@@ -9,7 +9,14 @@ namespace Centauri_Online.Data
 {
     public class GenericDataAccess<T>
     {
-        public IEnumerable<T> FindAll(string documentName)
+        private string documentName;
+
+        public GenericDataAccess(string documentName)
+        {
+            this.documentName = documentName;
+        }
+
+        public IEnumerable<T> FindAll()
         {
             using (var db = new LiteDatabase(ConnectionHelper.DBFileName))
             {
@@ -18,7 +25,7 @@ namespace Centauri_Online.Data
             }
         }
 
-        public T Find(int id, string documentName)
+        public T Find(int id)
         {
             using (var db = new LiteDatabase(ConnectionHelper.DBFileName))
             {
@@ -27,7 +34,7 @@ namespace Centauri_Online.Data
             }
         }
 
-        public bool Upsert(T weapon, string documentName)
+        public bool Upsert(T weapon)
         {
             using (var db = new LiteDatabase(ConnectionHelper.DBFileName))
             {
@@ -36,7 +43,7 @@ namespace Centauri_Online.Data
             }
         }
 
-        public bool Delete(int id, string documentName)
+        public bool Delete(int id)
         {
             using (var db = new LiteDatabase(ConnectionHelper.DBFileName))
             {

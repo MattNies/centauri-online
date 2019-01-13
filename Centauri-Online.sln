@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centauri-Online", "Centauri-Online\Centauri-Online.csproj", "{76B7D68B-643A-4213-8381-BDC3DA4BF101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Centauri-Online", "Centauri-Online\Centauri-Online.csproj", "{76B7D68B-643A-4213-8381-BDC3DA4BF101}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{063E1DA5-0E04-459C-BD87-F198940870AF}"
+	ProjectSection(SolutionItems) = preProject
+		gulpfile.js = gulpfile.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

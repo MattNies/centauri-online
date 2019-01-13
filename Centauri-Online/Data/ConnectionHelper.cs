@@ -7,7 +7,7 @@ namespace Centauri_Online.Data
 {
     public class ConnectionHelper
     {
-        public static String DBFileName
+        public static string DBFileName
         {
             get
             {
